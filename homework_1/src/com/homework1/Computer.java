@@ -1,8 +1,8 @@
 package com.homework1;
 
-public class Computer {
+class Computer {
 
-    private class MotherBoard {
+    private static class MotherBoard {
         private String model;
         private double price;
 
@@ -12,7 +12,7 @@ public class Computer {
         }
     }
 
-    private class CPU {
+    private static class CPU {
         private double price;
         private double frequency;
 
@@ -22,7 +22,7 @@ public class Computer {
         }
     }
 
-    private class HardDrive {
+    private static class HardDrive {
         private double price;
         private double capacity;
 
@@ -36,7 +36,7 @@ public class Computer {
     private CPU cpu;
     private HardDrive hardDrive;
 
-    public Computer(
+    Computer(
             String motherBoardModel,
             double motherBoardPrice,
             double cpuPrice,
@@ -48,7 +48,7 @@ public class Computer {
         this.hardDrive = new HardDrive(hardDrivePrice, hardDriveCapacity);
     }
 
-    public double getPrice() {
+    double getPrice() {
         return this.motherBoard.price + this.cpu.price + this.hardDrive.price;
     }
 }
