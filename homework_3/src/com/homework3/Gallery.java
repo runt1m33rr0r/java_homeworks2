@@ -44,9 +44,8 @@ class Gallery {
         Collections.sort(this.artList);
     }
 
-    int getArtCountByArea() {
-        int areaSizePerArt = (int)this.area / this.artList.size();
-        return (int)this.area / areaSizePerArt;
+    double getArtCountByArea() {
+        return this.area / this.artList.size();
     }
 
     List<Art> getEveryThirdArt() {
